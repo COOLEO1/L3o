@@ -1,0 +1,99 @@
+/* ============================================================
+   L3o AI — Global Design Tokens
+   Created by Leon Mapelera 🇲🇼
+   Theme: dark futuristic AI console
+   ============================================================ */
+
+:root {
+  /* Surfaces */
+  --bg-void: #05070d;
+  --bg-deep: #0a0e18;
+  --bg-surface: #10141f;
+  --bg-elevated: #171d2c;
+  --bg-elevated-hover: #1e2536;
+  --border-subtle: rgba(140, 160, 210, 0.14);
+  --border-strong: rgba(140, 160, 210, 0.28);
+
+  /* Accents */
+  --accent-cyan: #4cf3d6;
+  --accent-cyan-dim: rgba(76, 243, 214, 0.15);
+  --accent-violet: #8b7fff;
+  --accent-violet-dim: rgba(139, 127, 255, 0.15);
+  --gradient-signature: linear-gradient(135deg, #4cf3d6 0%, #8b7fff 100%);
+
+  /* Text */
+  --text-primary: #eaf0fb;
+  --text-secondary: #aab4cc;
+  --text-muted: #6b7690;
+
+  /* Type */
+  --font-display: "Orbitron", "Inter", sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Radii / shadows */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --shadow-glow: 0 0 40px rgba(76, 243, 214, 0.12);
+  --shadow-elevated: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(ellipse 120% 80% at 50% -10%, #101a2e 0%, var(--bg-void) 55%);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--accent-cyan);
+}
+
+::selection {
+  background: var(--accent-violet-dim);
+  color: var(--text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-violet);
+}
+
+button {
+  font-family: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
